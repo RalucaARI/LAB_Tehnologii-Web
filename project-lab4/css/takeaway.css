@@ -1,0 +1,49 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #3471B8;
+    color: white;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+        minmax(min(100%, 240px), 1fr));
+    gap: 1rem;
+}
+
+.card {
+    box-sizing: border-box;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 30px;
+    }
+}
