@@ -20,3 +20,6 @@ def universities(request):
 
 def galerie(request):
     return render(request, 'HTML/galerie.html')
+
+def library(request):
+    return render(request, "html/library.html")

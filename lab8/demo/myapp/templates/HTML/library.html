@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/library_style.css' %}">
+    <title>Bibliotecă</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'home' %}#facultati">Facultăți</a></li>
+                <li><a href="{% url 'home' %}#tehnologii">Tehnologii</a></li>
+                <li><a href="{% url 'chatbot' %}">Chatbot</a></li>
+                <li><a href="{% url 'universities' %}">Universități</a></li>
+                <li><a href="{% url 'library' %}">Bibliotecă</a></li>
+                <li><a href="{% url 'login' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Bibliotecă online</h1>
+        <p>Caută cărți și descoperă resurse pentru studiu.</p>
+
+        <form id="searchForm">
+            <input id="queryInput" type="text" placeholder="Introdu titlul unei cărți...">
+            <button id="searchBtn" type="submit">Caută</button>
+        </form>
+
+        <p id="status" aria-live="polite"></p>
+        <button id="exportBtn" type="button" disabled>
+            Export CSV
+        </button>
+        <div id="results"></div>
+    </main>
+
+    <footer>Bibliotecă online - Open Library API</footer>
+
+    <script type="module" src="{% static 'JS/library.js' %}"></script>
+</body>
+</html>
